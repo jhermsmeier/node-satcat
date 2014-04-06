@@ -1,0 +1,27 @@
+{
+  "name": "satcat",
+  "version": "0.0.0",
+  "description": "SATCAT (Satellite Catalogue) Format",
+  "main": "lib/satcat",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhermsmeier/node-satcat.git"
+  },
+  "keywords": [
+    "satcat",
+    "satellite",
+    "catalogue"
+  ],
+  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhermsmeier/node-satcat/issues"
+  },
+  "homepage": "https://github.com/jhermsmeier/node-satcat",
+  "dependencies": {
+    "derive": "^2.3.0"
+  }
+}
