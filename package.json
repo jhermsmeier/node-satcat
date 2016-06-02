@@ -1,27 +1,37 @@
 {
   "name": "satcat",
-  "version": "0.0.0",
-  "description": "SATCAT (Satellite Catalogue) Format",
-  "main": "lib/satcat",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jhermsmeier/node-satcat.git"
-  },
+  "version": "1.0.0",
+  "description": "SATCAT (Satellite Catalogue) Format Parser",
+  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
+  "license": "MIT",
   "keywords": [
     "satcat",
     "satellite",
-    "catalogue"
+    "orbit",
+    "space",
+    "format",
+    "parser",
+    "celestrak",
+    "catalogue",
+    "nasa",
+    "esa"
   ],
-  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com>",
-  "license": "MIT",
+  "main": "lib/satcat.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "homepage": "https://github.com/jhermsmeier/node-satcat",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhermsmeier/node-satcat.git"
+  },
   "bugs": {
     "url": "https://github.com/jhermsmeier/node-satcat/issues"
   },
-  "homepage": "https://github.com/jhermsmeier/node-satcat",
-  "dependencies": {
-    "derive": "^2.3.0"
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
