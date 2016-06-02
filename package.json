@@ -18,7 +18,9 @@
   ],
   "main": "lib/satcat.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "~2.5.3"
+  },
   "homepage": "https://github.com/jhermsmeier/node-satcat",
   "repository": {
     "type": "git",
@@ -32,6 +34,6 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --ui tdd"
   }
 }

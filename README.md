@@ -2,6 +2,7 @@
 [![npm](https://img.shields.io/npm/v/satcat.svg?style=flat-square)](https://npmjs.com/package/satcat)
 [![npm license](https://img.shields.io/npm/l/satcat.svg?style=flat-square)](https://npmjs.com/package/satcat)
 [![npm downloads](https://img.shields.io/npm/dm/satcat.svg?style=flat-square)](https://npmjs.com/package/satcat)
+[![build status](https://img.shields.io/travis/jhermsmeier/node-satcat.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-satcat)
 
 SATCAT (Satellite Catalogue) Format Parser
 
