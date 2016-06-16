@@ -1,9 +1,7 @@
-# satcat
+# SATCAT (Satellite Catalogue)
 [![npm](https://img.shields.io/npm/v/satcat.svg?style=flat-square)](https://npmjs.com/package/satcat)
 [![npm license](https://img.shields.io/npm/l/satcat.svg?style=flat-square)](https://npmjs.com/package/satcat)
 [![npm downloads](https://img.shields.io/npm/dm/satcat.svg?style=flat-square)](https://npmjs.com/package/satcat)
-
-SATCAT (Satellite Catalogue) Format Parser
 
 - Format definition: http://www.celestrak.com/satcat/satcat-format.asp
 - Raw data (approx. 5MB): http://www.celestrak.com/pub/satcat.txt
