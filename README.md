@@ -19,7 +19,7 @@ $ node example/index.js
 ```
 
 ```js
-var Satcat = require( '..' )
+var Satcat = require( 'satcat' )
 var http = require( 'http' )
 
 var parser = new Satcat.Parser()
