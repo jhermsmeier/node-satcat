@@ -1,10 +1,13 @@
 var Satcat = require( '..' )
 var http = require( 'http' )
+var inspect = require( './inspect' )
+var path = require( 'path' )
+var os = require( 'os' )
 
 var parser = new Satcat.Parser()
   .on( 'data', function( satellite ) {
-    console.log( satellite )
-    console.log( '' )
+    process.stdout.write( inspect( satellite ) )
+    process.stdout.write( os.EOL + os.EOL )
   })
 
 http.get( 'http://www.celestrak.com/pub/satcat.txt', function( response ) {
