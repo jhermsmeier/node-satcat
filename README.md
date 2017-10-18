@@ -2,6 +2,7 @@
 [![npm](https://img.shields.io/npm/v/satcat.svg?style=flat-square)](https://npmjs.com/package/satcat)
 [![npm license](https://img.shields.io/npm/l/satcat.svg?style=flat-square)](https://npmjs.com/package/satcat)
 [![npm downloads](https://img.shields.io/npm/dm/satcat.svg?style=flat-square)](https://npmjs.com/package/satcat)
+[![build status](https://img.shields.io/travis/jhermsmeier/node-satcat/master.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-satcat)
 
 - Format definition: http://www.celestrak.com/satcat/satcat-format.asp
 - Raw data (approx. 5MB): http://www.celestrak.com/pub/satcat.txt
@@ -12,36 +13,39 @@
 $ npm install --save satcat
 ```
 
-## Example
-
-```
-$ node example/index.js
-```
+## Usage
 
 ```js
 var Satcat = require( 'satcat' )
-var http = require( 'http' )
+```
 
+### Parsing a Stream
+
+```js
 var parser = new Satcat.Parser()
-  .on( 'data', function( satellite ) {
-    console.log( satellite )
-    console.log( '' )
-  })
+```
 
+```js
 http.get( 'http://www.celestrak.com/pub/satcat.txt', function( response ) {
-  if( response.statusCode === 200 ) {
-    response.pipe( parser )
-  } else {
-    console.log( 'HTTP', response.statusCode )
-    process.exit( 1 )
-  }
-}).on( 'error', function( error ) {
-  console.log( error.stack )
-  process.exit( 1 )
+  response.pipe( parser )
 })
 ```
 
-Output:
+```js
+parser.on( 'readable', function() {
+  var satellite = null
+  while( satellite = this.read() ) {
+    // ...
+  }
+})
+```
+
+### Parsing a Record
+
+```js
+var record = '1957-001B    00002  *D SPUTNIK 1                 CIS    1957-10-04  TYMSC  1958-01-03     96.1   65.0     945     227     N/A       '
+var satellite = Satcat.Satellite.parse( record )
+```
 
 ```
 Satellite {
@@ -60,23 +64,17 @@ Satellite {
   apogeeAltitude: 945,
   perigeeAltitude: 227,
   radarCrossSection: NaN,
-  orbitalStatus: '' }
-
-Satellite {
-  id: '1957-002A',
-  catalogNumber: '00003',
-  multipleNames: false,
-  payload: true,
-  status: 'D',
-  name: 'SPUTNIK 2',
-  source: 'CIS',
-  launchDate: 1957-11-03T00:00:00.000Z,
-  launchSite: 'TYMSC',
-  decayDate: 1958-04-14T00:00:00.000Z,
-  orbitalPeriod: 103.7,
-  inclination: 65.3,
-  apogeeAltitude: 1659,
-  perigeeAltitude: 211,
-  radarCrossSection: 0.08,
-  orbitalStatus: '' }
+  orbitalStatus: ''
+}
 ```
+
+## Benchmarks
+
+```
+npm run benchmark
+```
+
+## Examples
+
+- `node example/http` - Streaming the Celestrak Satellite Catalogue
+- `node example/file` - Parsing & outputting the test data
