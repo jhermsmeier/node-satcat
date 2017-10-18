@@ -47,7 +47,7 @@ var record = '1957-001B    00002  *D SPUTNIK 1                 CIS    1957-10-04
 var satellite = Satcat.Satellite.parse( record )
 ```
 
-```
+```js
 Satellite {
   id: '1957-001B',
   catalogNumber: '00002',
