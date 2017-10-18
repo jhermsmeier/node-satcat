@@ -17,7 +17,9 @@
     "esa"
   ],
   "main": "lib/satcat.js",
-  "dependencies": {},
+  "dependencies": {
+    "bloodline": "^1.0.1"
+  },
   "devDependencies": {},
   "homepage": "https://github.com/jhermsmeier/node-satcat",
   "repository": {
