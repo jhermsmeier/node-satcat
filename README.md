@@ -71,7 +71,11 @@ Satellite {
 ## Benchmarks
 
 ```
-npm run benchmark
+$ npm run benchmark
+```
+
+```
+Parsed 42972 records in 0.369 ms
 ```
 
 ## Examples
