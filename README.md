@@ -43,7 +43,7 @@ parser.on( 'readable', function() {
 ### Parsing a Record
 
 ```js
-var record = '1957-001B    00002  *D SPUTNIK 1                 CIS    1957-10-04  TYMSC  1958-01-03     96.1   65.0     945     227     N/A       '
+var record = `1957-001B    00002  *D SPUTNIK 1                 CIS    1957-10-04  TYMSC  1958-01-03     96.1   65.0     945     227     N/A       `
 var satellite = Satcat.Satellite.parse( record )
 ```
 
@@ -75,7 +75,7 @@ $ npm run benchmark
 ```
 
 ```
-Parsed 42972 records in 0.369 ms
+Parsed 42972 records in 0.140 ms
 ```
 
 ## Examples
